@@ -1,4 +1,7 @@
-<p-table  [value]="users" [rows]="10" [paginator]="true">
+<p>{{displaySharedData}}</p>
+<br>
+<p-table  [value]="users" [scrollable]="true" [rows]="200" scrollHeight="400px"
+[virtualScroll]="true" [virtualRowHeight]="50">
     <ng-template ptemplate="Header">
     <th *ngFor="let col of cols" [pSortableColumn]="col.field">
     <p-sorticon [field]="col.field"></p-sorticon>

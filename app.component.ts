@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Users } from './users';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TestProject';
+  constructor(public sharedData:Users)
+  {
+
+  }
+  ngOnInit(): void {
+    this.sharedData.sharedData="Testing";
+  }
 }
+
